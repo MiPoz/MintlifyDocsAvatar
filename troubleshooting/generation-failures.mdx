@@ -1,0 +1,115 @@
+---
+title: "Fix Face, Scene, and Background Generation Failures"
+sidebarTitle: "Generation Failures"
+description: "Every face and scene generation error message in Avatar Factory, what each one means, ordered fixes to try, and what to do if the issue persists."
+---
+
+Most face and scene generation failures are one-off. Click **Try again** on the failed tile — or resend the prompt in Image Studio — and it usually works on the next attempt. A generation that fails should not use a credit. If the same error keeps appearing, work through the ordered fixes below from most to least likely.
+
+## Error messages and what they mean
+
+<AccordionGroup>
+  <Accordion title="Couldn't generate this face (one tile)">
+    **Where:** Face step in the avatar wizard — one tile in the batch.
+
+    **What it means:** That single candidate failed. The other two tiles in the batch are untouched.
+
+    **Fix:** Click **Try again** under the failed tile. Each retry is a new generation at 1 credit. Fix the description before retrying multiple times.
+  </Accordion>
+
+  <Accordion title="Face generation failed">
+    **Where:** Face step — the whole batch was rejected.
+
+    **What it means:** All three candidates were refused, usually because the description contains something the content filter blocks.
+
+    **Fix:** Simplify the description — remove real celebrity names, brand logos, contradictions, or anything against the content rules — then try again.
+  </Accordion>
+
+  <Accordion title="Face generation timed out">
+    **Where:** Face step.
+
+    **What it means:** The batch ran past eight minutes without returning a result.
+
+    **Fix:** Leave the tab open during generation — closing the tab and reopening it reattaches to the running job instead of starting a new one. If the timeout happens again, refresh the page and check the grid; the image may already be there. Then try again.
+  </Accordion>
+
+  <Accordion title="The refine failed — try again in a moment">
+    **Where:** Face step, refine sheet.
+
+    **What it means:** The refine call did not return. Your original face is kept intact — nothing was overwritten.
+
+    **Fix:** Wait a moment and click **Try again**.
+  </Accordion>
+
+  <Accordion title="Uploading your photo failed">
+    **Where:** Face step or the import photo step.
+
+    **What it means:** The file did not reach the server.
+
+    **Fix:** Check the file format — PNG, JPG, WebP, and HEIC are accepted — and the file size (maximum 15 MB). A blurry or heavily filtered photo can also cause failure. Fix the file and try again.
+  </Accordion>
+
+  <Accordion title="Generation failed or timed out (Image Studio)">
+    **Where:** Image Studio — scene or background generation.
+
+    **What it means:** The scene render was rejected or ran past eight minutes.
+
+    **Fix:** Click **Try again**. If it fails repeatedly, simplify the prompt — remove contradictions, real names, or flagged content — and send it again.
+  </Accordion>
+
+  <Accordion title="Upgrade to a paid plan to create scenes and videos">
+    **Where:** Image Studio or video wizard.
+
+    **What it means:** Your account is on the free allowance (2 images + 5 scripts total) and has not started the paid trial yet.
+
+    **Fix:** Open **Plan & Usage** and start the $1 three-day trial. It includes 15 credits and unlocks scenes and video.
+  </Accordion>
+</AccordionGroup>
+
+## Fix steps in order of likelihood
+
+Work through these in order when generation keeps failing:
+
+<Steps>
+  <Step title="Try once more">
+    Click **Try again** on the failed tile or resend the prompt. Give the countdown time to finish — a face batch starts near "~75s left" and holds near 10 seconds at the end while the final result lands. That pause is normal.
+  </Step>
+  <Step title="Keep the tab open during face batch generation">
+    If you close the tab, reopening the wizard reattaches to the running job instead of starting a new one. Leave the tab open until the batch completes.
+  </Step>
+  <Step title="Simplify the description">
+    Remove contradictions (for example, "bald, long hair"), real celebrity names, brand logos, or anything the content rules block. Flagged descriptions fail every time regardless of how many retries you attempt.
+  </Step>
+  <Step title="Check the reference image">
+    In Exact match mode and in the import wizard, the file must be PNG, JPG, WebP, or HEIC, and under 15 MB. A tiny, blurry, or heavily filtered photo can produce a failed face. Fix the file before retrying.
+  </Step>
+  <Step title="Check your connection">
+    A timeout often means the browser lost the server poll. Refresh the page and check the grid — the image may already be there.
+  </Step>
+  <Step title="Check your credit balance">
+    Open **Plan & Usage**. If your balance is zero, generation stops. See [Out of Credits or Hit the Daily Render Limit](/troubleshooting/credits-and-limits).
+  </Step>
+  <Step title="Wait a few minutes">
+    If several generations fail in a row with the same message, the image service may be temporarily down. Wait a few minutes and try again.
+  </Step>
+</Steps>
+
+<Warning>
+  Each **Try again** on a face tile is a new generation. A successful retry costs 1 credit. Retrying five times on a description that will never pass the content filter costs five credits. Fix the description first.
+</Warning>
+
+## Credits and failed generations
+
+A generation that failed and produced nothing should not use a credit. If your balance dropped after a failed or timed-out generation, email [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) with the details below. Credits for failed generations are returned — that is the policy, no argument needed.
+
+## Contacting support
+
+If the issue persists after working through the steps above, email [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) with:
+
+- Your account email address
+- The avatar name and what you were generating (face, scene, or background)
+- The exact error message, or a screenshot
+- The approximate time and your timezone
+- Your device and browser
+
+Support replies within one business day.

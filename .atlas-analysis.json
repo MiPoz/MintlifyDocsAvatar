@@ -1,0 +1,114 @@
+{
+  "projectType": "saas",
+  "projectName": "Avatar Factory",
+  "projectDescription": "Avatar Factory is an all-in-one AI influencer studio that turns a character brief into finished short-form video reels — complete with generated face, voice, script, and scenes — without any filming, recording, or editing.",
+  "theme": "willow",
+  "primaryColor": "#24c6fc",
+  "lightColor": "#865ef5",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Avatars",
+            "pages": [
+              "avatars/overview",
+              "avatars/create-from-scratch",
+              "avatars/templates",
+              "avatars/import-your-face",
+              "avatars/voices",
+              "avatars/scenes-and-images"
+            ]
+          },
+          {
+            "group": "Videos",
+            "pages": [
+              "videos/overview",
+              "videos/video-wizard",
+              "videos/recreate-a-reel",
+              "videos/download-and-captions"
+            ]
+          },
+          {
+            "group": "Growth Tools",
+            "pages": [
+              "growth/viral-radar",
+              "growth/reel-analytics",
+              "growth/publishing"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/claude-mcp",
+              "integrations/chatgpt-mcp",
+              "integrations/trends-mcp",
+              "integrations/api-access"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "billing/plans",
+              "billing/credits",
+              "billing/manage-subscription"
+            ]
+          },
+          {
+            "group": "Policies",
+            "pages": [
+              "policies/content-rules",
+              "policies/refund-policy"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/render-failures",
+              "troubleshooting/generation-failures",
+              "troubleshooting/credits-and-limits",
+              "troubleshooting/contact-support"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "AI Avatar Generator — build a character with a generated face, voice, backstory, and reference pack from a short brief or template",
+    "Video Wizard — three templates (UGC Reel, Two-Hander Podcast, Split-Window Reel) that take a script to a finished MP4 in under 3 minutes",
+    "Script sourcing — AI content expert brainstorming, reel/TikTok/YouTube transcription, Full Clone (shot-by-shot storyboard copy), or scratch",
+    "Cinematic motion shots powered by Kling v3 and talking-head shots powered by HeyGen Avatar IV",
+    "Image Studio — generate and save scenes, photos, and outfits; 6-angle Reference Pack for consistent avatar appearance across videos",
+    "Viral Radar — track competitor accounts, scan for outperforming reels, and surface trending hooks from 500M+ analyzed videos",
+    "Reel Analytics — filter, sort, and copy viral reels directly into the video wizard",
+    "Claude and ChatGPT MCP connectors — research trends, generate scripts, and hand off to the app for rendering from inside the chat",
+    "Free read-only Trends MCP connector — five tools for hook ideation and trend research with no payment required",
+    "Auto-captions with 8 burn-in styles, QA report, shot regeneration, and video editor",
+    "ElevenLabs voice integration — connect an API key to use any ElevenLabs voice on an avatar",
+    "Three-day $1 trial with full feature access across all plans"
+  ],
+  "publicApiSurface": [
+    "MCP connector URL: https://mcp.avatarfactory.io/mcp",
+    "Free Trends MCP URL: https://mcp.avatarfactory.io/trends/mcp",
+    "MCP tool: get_trending",
+    "MCP tool: ideate_influencer",
+    "MCP tool: ideate_hooks",
+    "MCP tool: get_video_ideas",
+    "MCP tool: generate_reel_script",
+    "MCP tool: list_avatars",
+    "MCP tool: publish_video",
+    "MCP tool: get_account_status",
+    "REST API access (Influencer plan only, manual setup via support)"
+  ]
+}

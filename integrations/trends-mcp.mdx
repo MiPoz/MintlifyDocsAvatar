@@ -1,0 +1,85 @@
+---
+title: "Free Trends MCP: Research Hooks Without a Paid Plan"
+sidebarTitle: "Trends MCP"
+description: "Use the free, read-only Trends MCP to research niches, hooks, and persona concepts in Claude or ChatGPT — no credit card, no API key, just an email."
+---
+
+The Avatar Factory Trends MCP is a free, read-only connector designed for short-form creators who want research-backed content ideas without committing to a paid plan. Add it to Claude or ChatGPT with an email address, and you get five tools that surface what's trending in any niche, generate persona concepts, and produce hook and video-idea variations — all backed by 500 million analyzed reels. No images, no video, no audio, no credits, no charges. Everything is text in, text out.
+
+## What the Trends MCP Does
+
+The connector gives your AI assistant access to Avatar Factory's trend dataset without any rendering capability or payment step. It's the right starting point if you're exploring a niche, planning your first avatar, or want to validate content ideas before subscribing.
+
+<CardGroup cols={2}>
+  <Card title="Free to connect" icon="lock-open">
+    Sign in with your email only. No credit card, no API key, no payment step anywhere in the flow.
+  </Card>
+  <Card title="Read-only" icon="eye">
+    Nothing you do here writes to your account, spends credits, or posts anywhere. Text in, text out.
+  </Card>
+  <Card title="500M analyzed reels" icon="chart-line">
+    Every answer draws from a dataset of 500 million short-form videos on Instagram and TikTok.
+  </Card>
+  <Card title="5 research tools" icon="wrench">
+    Trends, personas, hooks, video ideas, and account status — all free, all text-only.
+  </Card>
+</CardGroup>
+
+**Trends MCP URL:** `https://mcp.avatarfactory.io/trends/mcp`
+
+## Setup
+
+<Steps>
+  <Step title="Open your assistant's connector settings">
+    In Claude, go to **Settings → Connectors → Add custom connector**. In ChatGPT, go to **Settings → Connectors → Advanced settings**, enable Developer Mode, then add a new connector.
+  </Step>
+  <Step title="Paste the Trends MCP URL">
+    Enter `https://mcp.avatarfactory.io/trends/mcp` and save. This is the free research connector — make sure it's not the full `mcp` URL.
+  </Step>
+  <Step title="Sign in with your email">
+    A connect window opens. Enter your email to create a free Avatar Factory account — no credit card and no payment step appear. Returning? Sign in with your existing password.
+  </Step>
+  <Step title="Approve the consent screen">
+    Review the permissions and click **Approve**. The five research tools appear in your assistant immediately.
+  </Step>
+</Steps>
+
+## Available Tools
+
+All five tools are free, read-only, and text-only.
+
+| Tool | What It Does |
+|---|---|
+| `get_trending` | Trending formats and hooks in any niche, drawn from 500 million analyzed reels |
+| `ideate_influencer` | Persona concept: name options, backstory angles, and target audience |
+| `ideate_hooks` | Opening-line variations built on proven scroll-stopping hook patterns |
+| `get_video_ideas` | A queue of short-form reel and story ideas for any topic |
+| `get_account_status` | Your plan tier and remaining free research quota |
+
+<Tip>
+  Run `get_account_status` to check how much free research quota you have remaining in your current period.
+</Tip>
+
+## What the Trends MCP Cannot Do
+
+The Trends MCP is intentionally scoped to research only. It does **not**:
+
+- Generate images, video, or audio
+- Write full reel scripts (that requires `generate_reel_script` on the full connector)
+- Post anything to Instagram, TikTok, or anywhere else
+- Spend credits or charge your account in any way
+- Access your avatar library
+
+<Note>
+  If you ask the Trends MCP to write a script or render a video, it will explain that those actions require the full connector. Nothing is charged; the request simply isn't available on this connector.
+</Note>
+
+## Upgrading to the Full Connector
+
+When you're ready to go from research to production — writing scripts, building avatars, and rendering reels — switch to the full Avatar Factory connector:
+
+**Full connector URL:** `https://mcp.avatarfactory.io/mcp`
+
+The full connector requires an active Avatar Factory subscription (the $1 trial counts). See [Connect to Claude via MCP](/integrations/claude-mcp) or [Connect to ChatGPT via MCP](/integrations/chatgpt-mcp) for setup instructions.
+
+You can run both connectors side by side in the same assistant — the Trends connector for free research, the full connector for production work.

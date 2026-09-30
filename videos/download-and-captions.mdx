@@ -1,0 +1,143 @@
+---
+title: "Download Your Video, Add Captions, and Run QA"
+sidebarTitle: "Download & QA"
+description: "Download with or without captions, preview eight caption styles, run the QA report, regenerate individual shots, and rebuild the final cut."
+---
+
+Once your video finishes rendering, the Videos page surfaces everything you need to get it publish-ready: two download options, eight caption styles to preview on your own footage, a QA report that scores every technical dimension, and per-shot regeneration so you can swap out anything that didn't land without re-rendering the whole video. This page walks through each tool in order.
+
+## Download the video
+
+Open the video from the **Videos** page. The "Download video" card sits below the player and offers two buttons.
+
+<CardGroup cols={2}>
+  <Card title="⬇ With Captions…" icon="closed-captioning">
+    Opens the caption style picker. Preview all eight styles on your own footage before committing — selecting a card is free. Only the **Download** button in the bottom bar burns the captions and starts the download.
+  </Card>
+  <Card title="⬇ Clean Master (no captions)" icon="film">
+    Downloads the caption-free master immediately. No processing required.
+  </Card>
+</CardGroup>
+
+### Caption styles and position
+
+The style picker shows eight options, each previewed as a frame from your actual video so you can see exactly how the words sit on your footage.
+
+| Style | Character |
+|---|---|
+| **Studio Pop** | Bold, high-contrast words with a vibrant drop shadow |
+| **Chip** | Each word in its own rounded pill |
+| **Stamp Drop** | Heavy stamped lettering with a hard offset shadow |
+| **Marker Swipe** | Handwritten-style with a color swipe highlight |
+| **Mono Bracket** | Clean monospaced text in square brackets |
+| **Typewriter** | Classic typewriter font, letter by letter |
+| **Plain** | Simple white text, no decoration |
+| **Solid Box** | Words on a filled color block |
+
+Above the style cards, **Position** places the captions at **Top**, **Middle** (default), or **Bottom**. Click the selected option again to clear it. Each style remembers its own vertical position.
+
+Clicking a card selects it — no credit cost. The button in the "Selected" bar at the bottom is what burns the captions to your video and downloads the file. That same button saves your selection as the default style for future videos.
+
+**Burn timing:**
+
+- First burn on a video: ~1 minute (the words are timed to the audio once).
+- Every additional style: a few seconds.
+- A style you've already burned: instant download from cache.
+
+<Note>
+  Subtitles set to **On** in the wizard are burned into the render itself. The caption picker on the video page lets you add or change styles on any finished video afterward — they are separate from the wizard's subtitle setting.
+</Note>
+
+### Templates with built-in captions
+
+The **Two-Hander Podcast** and **Split-Window Reel** templates draw their own captions as part of the video composition. On these videos the download card shows a single **⬇ Download video** button — adding a second caption layer would put two sets of words on screen. Both templates also offer a **Clean Master** download.
+
+## Social caption panel
+
+The "Social media description" panel sits below the Publishing card and is collapsed by default. Open it and click:
+
+- **Edit** — write or paste your own caption.
+- **Generate** — let the AI draft a caption from the video's content.
+- **Save** — saves the caption and reveals a copy button.
+
+**View full transcript** above the shot list shows the spoken words of every shot with a copy button. Audio tags (delivery instructions in brackets) are stripped from the copied text.
+
+## The More menu
+
+The **⋯ More** menu on the video page adds four additional actions: **Copy Link**, **Download Thumbnail**, **Run QA Report**, and **Delete**. Each individual shot card also offers **Download Shot** for that clip alone and **⬇ Scene Photo** for its scene still.
+
+## Run the QA report
+
+Open **⋯ More** and click **Run QA Report**. The report runs an automated audit of the finished video and returns a structured verdict.
+
+**Overall verdict:** APPROVED, REJECTED, or PENDING — with a score out of 100.
+
+**Six technical checks** (each scored out of 10):
+
+| Check | What it evaluates |
+|---|---|
+| Resolution & Format | 1080×1920, correct codec, no black bars |
+| Audio Quality | Clarity, volume, no clipping |
+| Lip Sync | Avatar speech aligned to audio |
+| Subtitles | Timing, readability, no overlap |
+| Visual Quality | Sharpness, lighting, no artifacts |
+| Duration | Length appropriate for the platform |
+
+**Script Virality** section scores the hook and the overall script, listing concrete strengths and specific improvements.
+
+At the bottom: **Required Fixes** lists what to address before posting; **Recommendations** lists what would improve the video but aren't blocking.
+
+<Tip>
+  If the report page shows "No QA checks ran yet.", the audit hasn't finished. Wait a few minutes and refresh. Click **← Back to Video** to return to the video page at any time.
+</Tip>
+
+## Regenerate one shot
+
+You don't need to re-render the whole video to fix one shot. Each shot card on the video page ends with "Wrong word, wrong move, or a weak scene? Fix the inputs and regenerate just this shot."
+
+<Steps>
+  <Step title="Open Fix This Shot">
+    Click **Fix This Shot** on the shot card. The booth opens as "✦ Fix Shot N · Talking Head" or "· Cinematic Motion", with the current take playing on the left so you can reference exactly what went wrong.
+  </Step>
+  <Step title="Change what needs fixing">
+    Edit any combination of:
+    - **Transcript** — change the words the avatar says in this shot.
+    - **Instructions** — change what the avatar is doing. This field is prefilled with the direction the shot was last rendered with; clear it to fall back to the default relaxed gesture.
+    - **Scene** — pick a different saved scene or generate a new one from the scene drawer.
+    - **Steering** — add an optional freeform note for issues that are hard to name, such as a wrong gesture or an unwanted expression.
+
+    If you make no changes, the modal notes "No input changes yet · this is a plain re-roll" — a re-roll is valid when you just want another attempt with the same inputs.
+  </Step>
+  <Step title="Confirm the regeneration">
+    Click **Confirm**. The shot card shows render progress and the message "Current take kept safe". The credits reserved for the re-roll are listed on the card. Your video stays fully playable throughout.
+  </Step>
+  <Step title="Review and keep a take">
+    When the card reads "✦ New take waiting", click **Review Takes**. Play both the new take and the current take side by side, then click to keep whichever you prefer. Closing the review without choosing parks the new take on the card — it doesn't disappear, and you can return to compare later.
+  </Step>
+</Steps>
+
+<Warning>
+  A shot set to "Starts where the previous shot ends" (chained to a neighbor's last frame) is **locked** while that neighbor is regenerating. The card says so. It unlocks automatically when the neighboring render finishes.
+</Warning>
+
+<Note>
+  A shot marked "This take didn't render" returns its credits automatically. Click **↻ Try Again** to re-roll, or **Fix This Shot** to change the inputs first. You are only charged for shots that complete successfully.
+</Note>
+
+## Rebuild the final video
+
+After you keep a new take, a bar appears at the bottom of the video page:
+
+> "A shot changed. Rebuild the final video to stitch the new take and re-burn captions."
+
+Click **Rebuild Final Video**. The player shows rebuild progress, and a small pill in the corner keeps the status visible while you scroll. Downloads and caption burns use the rebuilt cut from that point forward.
+
+## Edit Video
+
+**✂ Edit Video** on any finished video opens the full editor: trim clips, reorder shots, add stock footage, add music, and use the captions panel prefilled from your script. A chip at the top shows the save state — **Saved**, **Saving…**, or **Save Failed**.
+
+Click **Export Video** to render the edited composition as a new file. Click **Back to Video** to return to the video page without exporting.
+
+<Tip>
+  If another browser tab changed the same draft while the editor was open, the editor will ask you to reload before saving again. Reload to get the latest version and avoid overwriting changes.
+</Tip>

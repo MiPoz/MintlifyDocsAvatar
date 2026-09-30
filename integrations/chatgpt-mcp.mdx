@@ -1,0 +1,107 @@
+---
+title: "Connect Avatar Factory to ChatGPT in Developer Mode via MCP"
+sidebarTitle: "ChatGPT MCP"
+description: "Add the Avatar Factory MCP connector to ChatGPT via Developer Mode to research trends, write scripts, and hand off to the app for rendering."
+---
+
+ChatGPT supports MCP connectors through Developer Mode on paid plans. Once you enable Developer Mode and add the Avatar Factory connector, ChatGPT can research trending formats and hooks in your niche, write a full reel script in your persona voice, list your saved avatars, and hand you a one-click link to render the finished video in the Avatar Factory app. Connecting is free — no Avatar Factory plan is required — though tools beyond trend research and account status require an active subscription.
+
+## Before You Connect
+
+- **ChatGPT plan:** Developer Mode is available on paid ChatGPT plans — Plus, Pro, Business, Enterprise, and Education — on the web.
+- **Avatar Factory plan:** Connecting is free. `get_trending` and `get_account_status` work without a subscription. `generate_reel_script`, `list_avatars`, and `publish_video` require an active Avatar Factory plan (the $1 trial counts).
+- **Auth method:** OAuth 2.1 with PKCE. No API key needed.
+
+**MCP URL:** `https://mcp.avatarfactory.io/mcp`
+
+<Tip>
+  Avatar Factory is not yet listed in the ChatGPT App Directory, but you can add it today as a custom connector by pasting the URL — no waiting required.
+</Tip>
+
+## Setup
+
+<Steps>
+  <Step title="Open Settings → Connectors → Advanced settings">
+    In ChatGPT, go to **Settings**, then **Connectors**, then click **Advanced settings**.
+  </Step>
+  <Step title="Enable Developer Mode">
+    Toggle **Developer Mode** on. This option is available on all paid ChatGPT plans.
+  </Step>
+  <Step title="Add a new connector">
+    Back in **Connectors**, create a new connector. Paste `https://mcp.avatarfactory.io/mcp` and click **Save**.
+  </Step>
+  <Step title="Sign in to Avatar Factory">
+    A window opens for Avatar Factory authentication. Sign in with your Avatar Factory account email, or create a free account in-flow if you're new.
+  </Step>
+  <Step title="Approve the consent screen">
+    Review the permissions and click **Approve and connect**. No checkout or subscription prompt appears here — the connector connects at the free tier.
+  </Step>
+  <Step title="Enable the connector per conversation">
+    Start a new chat, open the **tools menu**, and enable the Avatar Factory connector for that conversation.
+  </Step>
+</Steps>
+
+## Available Tools
+
+| Tool | Available |
+|---|---|
+| `get_trending` | ✓ |
+| `ideate_influencer` | ✓ |
+| `ideate_hooks` | ✓ |
+| `get_video_ideas` | ✓ |
+| `generate_reel_script` | ✓ (requires Avatar Factory subscription) |
+| `list_avatars` | ✓ |
+| `publish_video` | ✓ (explicit request only) |
+| `get_account_status` | ✓ |
+
+<Note>
+  Trend research (`get_trending`, `ideate_influencer`, `ideate_hooks`, `get_video_ideas`) and `get_account_status` work on a free Avatar Factory account. Script generation, avatar listing, and publishing require an active paid plan.
+</Note>
+
+## Workflow
+
+<Steps>
+  <Step title="Research your niche">
+    Ask ChatGPT to pull trending formats in your niche. The connector calls `get_trending` and returns hook patterns and formats that are winning right now, backed by 500 million analyzed reels.
+  </Step>
+  <Step title="Develop hooks and a script">
+    Ask ChatGPT to generate hook variations with `ideate_hooks`, then write the full reel script using `generate_reel_script`. The script is delivered in your persona voice from hook to CTA.
+  </Step>
+  <Step title="Hand off to Avatar Factory">
+    When the script looks good, ask ChatGPT to hand it off. It returns a one-click link to the Avatar Factory app with your avatar preselected.
+  </Step>
+  <Step title="Render in the app">
+    Click the handoff link, confirm the script, and render. The finished captioned MP4 is ready in about three minutes.
+  </Step>
+</Steps>
+
+## Security Notes
+
+- **Scoped access** — ChatGPT can research trends, ideate personas, write scripts, and read your avatar library. Nothing else.
+- **Credits on explicit request only** — script generation runs only when you ask for it.
+- **Publishing requires your confirmation** — `publish_video` never runs automatically.
+- **Revoke anytime** — disconnect Avatar Factory from ChatGPT's Connectors settings.
+
+<Warning>
+  The connector never posts on its own. Publishing runs only when you explicitly ask for it in the conversation.
+</Warning>
+
+<Note>
+  ChatGPT cannot render video inside the chat. The connector hands you a one-click link to the Avatar Factory app, where the actual render happens. The finished video lives in your Avatar Factory library, not in ChatGPT.
+</Note>
+
+## Troubleshooting
+
+<Accordion title="The tools menu doesn't show Avatar Factory">
+  The connector must be enabled per conversation. Open the tools menu at the start of each new chat and toggle Avatar Factory on before asking it to use any tools.
+</Accordion>
+
+<Accordion title="Script generation fails or asks for a subscription">
+  `generate_reel_script`, `list_avatars`, and `publish_video` require an active Avatar Factory plan. Start the $1 trial at avatarfactory.io, then reconnect the session.
+</Accordion>
+
+<Accordion title="Developer Mode is not visible in my settings">
+  Developer Mode requires a paid ChatGPT plan. If you're on a free account, you'll need to upgrade before adding custom MCP connectors.
+</Accordion>
+
+Still stuck? Email [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) with your Avatar Factory account email, the screen where the connection stops, and whether you're using ChatGPT Plus, Pro, Business, Enterprise, or Education.

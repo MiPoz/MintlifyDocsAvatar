@@ -1,0 +1,119 @@
+---
+title: "Reel Analytics: Filter, Spot, and Copy Viral Reels"
+sidebarTitle: "Reel Analytics"
+description: "Filter and sort every indexed reel from tracked accounts, identify outperformers, and clone viral reels straight into the video wizard with one click."
+---
+
+Reel Analytics — found in the sidebar as **Viral Reels** — pulls every reel from the accounts you track and from Avatar Factory's curated Verified accounts into a single filterable table. It's where you turn competitor research into your own content: sort by what's climbing, spot the reels that dramatically outperformed their account's average, and copy any reel directly into the video wizard with one click. The page requires a Creator or higher plan; on Starter it opens on an upgrade prompt. The **Copied** tab is never gated, so your copy history stays accessible on any plan.
+
+## Navigating the Page
+
+The header shows three tabs:
+
+- **Viral Reels** — the main cross-account reel table
+- **☆ Favorites** — reels you've starred for easy reference
+- **Copied** — your full copy history with a running count
+
+**+ Track New Account** sits in the header too, so you can add a competitor without leaving the page. Newly tracked account reels appear in the table as they index.
+
+## Filter and Sort Toolbar
+
+<CardGroup cols={2}>
+  <Card title="Sort By" icon="arrow-up-wide-short">
+    Choose from **Views / Hr**, **Views**, **Likes**, **Comments**, **Eng %**, **Followers**, or **Recently Posted**.
+  </Card>
+  <Card title="Posted" icon="calendar">
+    Filter by **24 Hours**, **7 Days**, **30 Days**, **All Time**, or a **Custom** date range.
+  </Card>
+  <Card title="Source" icon="filter">
+    Show **All**, **My Follows** only, or **✦ Verified** only.
+  </Card>
+  <Card title="Account & Category" icon="tag">
+    Pick specific accounts or content categories, plus set minimum and maximum values for any metric.
+  </Card>
+</CardGroup>
+
+Click **Save as default** to lock in your preferred filter setup for every future visit. Star any reel to add it to **☆ Favorites**.
+
+<Tabs>
+  <Tab title="Grid View">
+    Reels appear as cards. Hover a card to play the reel inline without leaving the page.
+  </Tab>
+  <Tab title="Table View">
+    Reels appear in rows with additional sortable columns and an expandable transcript drawer for each reel.
+  </Tab>
+</Tabs>
+
+<Tip>
+  Sort by **Views / Hr** to surface what's climbing right now. A two-day-old reel with 200,000 views ranks above a two-year-old reel with a million — so you find momentum, not history.
+</Tip>
+
+## Outperformers
+
+An outperformer is a reel that dramatically beat the typical performance of the account that posted it. Turn on the **Outperformers Only** switch in the filter panel (under the Performance group, next to Views, Likes, and Comments) to isolate these reels and sort by their multiple.
+
+A reel qualifies when **both** conditions are true:
+
+- It has at least **5× the median views** of that account's other reels at the same age
+- It has at least **10,000 views**
+
+Avatar Factory compares each reel only to its own account, so a 40,000-view reel on a small account can outrank a 400,000-view reel on a large one. Scoring begins once an account has 10 reels with data, and a reel is scored from 24 hours old until it turns 30 days old.
+
+Qualifying reels display a badge showing the multiple — for example, **▲ 6.2×**. Three tiers signal the level of outperformance:
+
+| Badge | Threshold |
+|---|---|
+| ▲ (one arrow) | 5× median |
+| ▲▲ (two arrows) | 10× median |
+| ▲▲▲ (three arrows) | 25× median |
+
+Hover the badge to read what it's measured against — for example, "6.2× the account's own median at day 4."
+
+<Note>
+  When nothing qualifies yet, the page shows **No outperformers yet**. Track more accounts, or give your existing tracked accounts time to build up enough indexed reels for scoring to begin.
+</Note>
+
+## Copy a Reel Into the Wizard
+
+Every reel in the table has two actions:
+
+<CardGroup cols={2}>
+  <Card title="⧉ Copy Reel — Full Clone" icon="copy">
+    Costs **10 credits**. Breaks the reel into its shots, cuts, camera moves, and props, then rebuilds the storyboard in the wizard with your avatar. You move to the avatar selection step immediately while the analysis runs in the background.
+  </Card>
+  <Card title="Transcript Action — Words Only" icon="file-lines">
+    **Free.** Pulls the script text only and opens the wizard with the transcript pre-loaded as your script. No shot breakdown, no credit charge.
+  </Card>
+</CardGroup>
+
+Either path takes you to the Source URL screen with the original link already filled in, and the Script step opens with a source card that includes **View Reel ↗** so you can reference the original at any point.
+
+<Note>
+  Clicking **⧉ Copy Reel** twice on the same reel does **not** start two clones. The copy queue deduplicates by URL — the second click is a no-op.
+</Note>
+
+## The Copied Tab
+
+Every copy you start — from Reel Analytics, an account page, or inside the wizard — appears here with a status badge.
+
+| Badge | Meaning |
+|---|---|
+| Queued | Waiting in line |
+| Copying | Analysis is running now |
+| Done | Script is ready |
+| Failed | Copy did not complete |
+
+Filter the tab with **All**, **In Progress**, **Done**, or **Failed**.
+
+- A **Done** copy shows the first line of the script as its title, with **New Video From This** (opens the wizard in the same mode you used — Full Clone or Transcript) and **View Script**.
+- A **Failed** copy shows **Retry** and **Cancel**. Canceling asks for confirmation, removes the reel from the queue, and lets you paste its link again any time.
+
+## Use a Reel From Inside the Wizard
+
+On the **Source** step, select **From a followed account** to open an inline explorer with all your tracked reels. Each row has a **Use ▾** button and an **↻ Open** button to watch the original. Clicking **Use ▾** transcribes the reel and jumps to the Script step with the reel's handle, caption, and stats (views, likes, comments) on the source card.
+
+## If a Reel Is Missing
+
+The table only shows reels that have been indexed by a completed scan. A reel posted after an account's last scan appears on the next rescan. See [Viral Radar](/growth/viral-radar) for how the scan schedule and daily budget work.
+
+Reels from accounts you archived drop out of **My Follows** but remain visible under **All** if the account is Verified.

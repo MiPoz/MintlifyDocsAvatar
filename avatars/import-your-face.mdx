@@ -1,0 +1,91 @@
+---
+title: "Import Your Own Face into Avatar Factory"
+sidebarTitle: "Import Face"
+description: "Upload a photo to create an AI twin using your existing face. Ideal for cloning yourself or bringing a character you already own into Avatar Factory."
+---
+
+The import path lets you bring an existing face into Avatar Factory exactly as it is — no AI generation, no restyling. Your uploaded photo becomes the avatar's face, pixel for pixel, and Avatar Factory builds the rest of the character (story, voice, scenes) around it. This is the recommended path if you want to clone yourself with AI so the avatar on camera looks like you, or if you already have a branded character with a face your audience recognizes.
+
+If you only have a mood or a look in mind and don't have a specific photo to use, [create from scratch](/avatars/create-from-scratch) instead.
+
+## Open the import wizard
+
+1. Open **Avatars** in the sidebar and click **+ New Avatar**.
+2. On **How do you want to build it?**, click **Import your avatar** — the option reads *"Already have one? Upload its image and bring your own ElevenLabs voice."*
+3. The wizard has three steps: **Upload**, **Story**, **Voice**.
+
+## The three import wizard steps
+
+<Steps>
+  <Step title="Upload — Name the avatar and add the face">
+    The heading asks **Who are we importing?**
+
+    1. Type the **Avatar name** (for example, *Sarah Johnson*).
+    2. Under **Avatar images**, drop a file onto the card or click to pick one from your device. The first image you add becomes the face and is used exactly as uploaded — it is never regenerated, restyled, or cropped.
+    3. **Optional:** add up to five more images of the same person, by file upload or by pasting a link. These extra images become additional references in the avatar's Reference Pack and help the scene generator match the likeness in new settings. The link field only becomes active once the first face image is in place.
+    4. Click **Continue →**. Both the name and the face image are required to proceed.
+
+    ### File requirements
+
+    | Requirement | Detail |
+    |---|---|
+    | Accepted formats | PNG, JPG, WebP, HEIC |
+    | Maximum file size | 15 MB per file |
+    | Maximum files | 6 total (1 face + 5 references) |
+
+    If a file is rejected, the error message tells you why — for example: *"[filename] is not an image we can use. Upload a PNG or JPG portrait instead."* or *"[filename] is 18.2 MB. The limit is 15 MB."* Fix the file and add it again.
+
+    ### What makes a good photo
+
+    - Clear, front-facing portrait with eyes open and the face filling a good portion of the frame
+    - Even lighting — no heavy shadows across the face
+    - No sunglasses, hands, or objects covering the face
+    - One person in the frame — group shots confuse the Reference Pack
+    - Sharp and unfiltered — beauty filters and heavy compression carry into every generated scene
+    - Upright — rotate the photo before uploading
+
+    For the extra reference images, add different angles and expressions of the same person. More reference diversity gives the scene generator a better likeness to work from.
+  </Step>
+
+  <Step title="Story — Write the backstory and target audience">
+    The Story step works the same as in the scratch wizard. Write a **Backstory** yourself, or click **Ideate for me** to generate three angles and choose one. Fill in the **Target audience**, or click **Generate** for a draft.
+
+    No credits are charged on this step. Click **Continue to voice →** when ready.
+  </Step>
+
+  <Step title="Voice — Connect ElevenLabs, design a voice, or skip">
+    Choose one of three options from the segmented control:
+
+    - **Use my ElevenLabs voice.** Paste your ElevenLabs API key, then search and pick a voice from your account. Speech runs on your ElevenLabs credits.
+    - **✦ Design a new voice.** Opens the same three-preview voice audition as the scratch wizard. See [Voices](/avatars/voices) for the full process.
+    - **Skip for now.** Save without a voice and add one later from the avatar page.
+
+    Click **Save avatar →**.
+
+    <Note>
+      Voice is optional at this step, but every video requires one. If you skip, the app will prompt you to add a voice before you can render your first video.
+    </Note>
+  </Step>
+</Steps>
+
+## After saving
+
+The avatar opens on its page with your photo as the face. The **Reference Pack** builds in the background from your uploaded image — you'll see a progress indicator on the Reference Pack tab. Once it's ready, you can generate scenes that place your face in new settings while keeping the likeness stable. See [Scenes & Images](/avatars/scenes-and-images) for how the scene studio works.
+
+<Warning>
+  Only import faces you have the right to use — your own, or a character you created and own. Importing another person's likeness without their consent violates Avatar Factory's content rules and will result in the avatar being removed. If you're unsure, write to [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) before uploading.
+</Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Will Avatar Factory change or edit my photo?">
+    No. The first image you upload is the face, and it is used exactly as uploaded. Avatar Factory does not regenerate, restyle, or crop it. After you save, the app builds a Reference Pack of angles from that image, and any extra reference images you added help the scene generator match your likeness in new settings.
+  </Accordion>
+  <Accordion title="Can I import a photo of a real person?">
+    Only a face you have the right to use — your own, or one you created and own. Importing someone else's likeness without permission is against the content rules and will result in the avatar being removed. If you're unsure, read the content rules before uploading or write to [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO).
+  </Accordion>
+  <Accordion title="What if my file is rejected?">
+    The error message tells you the specific reason. Common causes are an unsupported file format, a file over 15 MB, or a photo that isn't a recognizable portrait. Fix the file — convert the format, reduce the size, or choose a clearer photo — and add it again.
+  </Accordion>
+</AccordionGroup>

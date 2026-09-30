@@ -1,0 +1,125 @@
+---
+title: "Recreate a Viral Reel with Full Clone"
+sidebarTitle: "Recreate a Reel"
+description: "Turn any Instagram, TikTok, or YouTube reel into your avatar's video — Transcribe keeps the words, Full Clone rebuilds every shot, cut, and camera move."
+---
+
+Avatar Factory can turn any public Instagram Reel, TikTok, or YouTube video into a new reel starring your avatar. You paste the link, choose how deeply you want to copy it, and the wizard does the rest — transcribing speech, rebuilding shots, and placing your avatar in the same scenes and camera angles as the original. This page covers both copy modes, every path into the flow, and the edge cases worth knowing about before you start.
+
+## Transcribe vs. Full Clone
+
+Both options land you in the video wizard with the reel as your source. The difference is how much of the original gets carried across.
+
+| | Transcribe | Full Clone |
+|---|---|---|
+| **Cost** | Free | 10 credits |
+| **What it copies** | Spoken words only | Cuts, camera moves, movements, props — shot by shot |
+| **Result** | Script in the editor for you to adapt | Storyboard with shots rebuilt around your avatar |
+| **Shots step** | AI producer directs from your script | Producer replicates the reel's storyboard; Re-direct All re-plans |
+
+The 10 credits for Full Clone are charged when the clone starts; the render is priced separately at the normal per-second rate.
+
+**Supported platforms:** Instagram Reels, TikTok, and YouTube. The wizard shows which platform it detected under the URL field. A wrong or unsupported link gets a plain error message — open the reel in a browser first, copy the full address from the address bar, and paste it again.
+
+## Clone from the template gallery
+
+Use this path when you already have the link and want to start the wizard directly from it.
+
+<Steps>
+  <Step title="Open + New Video">
+    Go to **Videos** and click **+ New Video**. The wizard opens on the template gallery, "What are we making today?".
+  </Step>
+  <Step title="Paste the link and click Recreate">
+    In the **Recreate a reel** field at the top of the gallery, paste the reel's link and click **Recreate →** (or press Enter). The wizard picks your avatar, then opens the Source URL screen and begins processing automatically — you'll see "Fetching the reel…" and "Transcribing speech…" as it works.
+  </Step>
+  <Step title="Pick your avatar">
+    Select the avatar you want to star in the recreated reel.
+  </Step>
+  <Step title="Use the transcript">
+    When "Transcript ready" appears with the word count, click **Use this transcript →** to open the Script step with the transcribed words already in the editor.
+  </Step>
+</Steps>
+
+## Clone from the Source step
+
+Use this path when you're already inside the wizard and want to switch to a reel as your source.
+
+<Steps>
+  <Step title="Go to the Source step">
+    In the wizard, navigate to the Source step and click **Paste a Reel / TikTok URL**.
+  </Step>
+  <Step title="Paste the link and choose your depth">
+    Paste the reel's link. Then choose:
+    - **Transcribe** — extracts the spoken words, free.
+    - **✦ Full Clone · 10 cr** — runs the full shot-by-shot analysis. The screen shows "Downloading the reel…", "Reading the cuts and camera moves…", and "Building your shot list…" — this usually takes 30 to 90 seconds.
+  </Step>
+  <Step title="Review the cloned script">
+    A finished clone jumps to the Script step automatically with "Cloned from reel" as the source card. If you navigated away, **Review the cloned script →** takes you there.
+  </Step>
+  <Step title="Review the Shots step">
+    On the Shots step, the AI producer replicates the reel's shot structure. Each replicated shot shows a **source window** — the corresponding clip from the original — so you can see exactly what scene and camera angle it's rebuilding. If shot analysis is still running when you arrive, the step shows "Reading the reel's shots" and builds the storyboard automatically within a minute.
+
+    Click **Re-direct All** at any time to re-plan the entire shot list from the reel's analysis.
+  </Step>
+</Steps>
+
+## Multi-person reels: who plays whom
+
+When the original reel features more than one person, the wizard adds a **Who plays whom?** step after the avatar/cast step.
+
+Each person detected in the reel gets a seat. For each seat, you choose:
+
+- **Replace with an avatar** — assign one of your avatars to play this person. The avatar's face and voice replace the original.
+- **Keep original person** — leave this person exactly as they appear in the reel, face and voice included. Their lines cannot be edited.
+
+<Note>
+  At least one seat must be assigned an avatar. You cannot keep all original people.
+</Note>
+
+On the Script step, **Hear It** plays only the lines assigned to your avatars. Lines belonging to a person you kept play in their original voice and cannot be edited in the script.
+
+## Sound behavior
+
+Every reel copy is generated with sound. What your avatar says (or doesn't say) depends on what the original sounds like.
+
+| Original reel audio | What happens in your copy |
+|---|---|
+| Someone speaks (words and timing from the reel) | Your avatar speaks the script. Music from the original is not copied. |
+| Music only — nobody talks | No script is generated; nobody speaks in your copy. |
+| Real sounds, nobody talks (steps, tools, a crowd) | Your video gets the same type of sounds; no one speaks. |
+
+You can delete every line from the script. Your video is then generated with no speech, and the script stays on the page so you can write new lines at any time. To add music, open the finished video and use **✂ Edit Video**.
+
+## Copy from Reel Analytics
+
+On the **Viral Reels** page, on any account's reel page, and in the Source step's **From a followed account** screen, every reel carries two quick-copy actions:
+
+- **⧉ Copy Reel** — starts a Full Clone immediately (10 credits). The clone begins in the background as soon as you click, so part of the analysis is often done by the time you arrive in the wizard.
+- A transcript action — runs Transcribe only.
+
+Click either, pick your avatar, and the Source URL screen runs the matching flow with the link already filled in. Your copies collect under the **Copied** tab on Reel Analytics with a status of Queued, Copying, Done, or Failed.
+
+## Copy the same reel again
+
+A video made from a clone shows a **Source Reel** card on its video page with the platform, the reel length, and "Analyzed into N shots".
+
+- **Watch Original ↗** — opens the original reel.
+- **Copy Again** — reopens the wizard from the cached analysis with no second 10-credit clone charge.
+
+## Special cases
+
+<Accordion title="Reel has no speech">
+  If the words in the reel are a background track's lyrics, the clone says so and leaves the script empty. Write your own script — the Shots step still rebuilds the visual storyboard from the analysis.
+</Accordion>
+
+<Accordion title="Full analysis fell back">
+  If the full analysis could not complete, the screen says "Full video analysis fell back" with the reason. You are charged only for the completed tier of the analysis. Shots are directed from the script instead of the reel's storyboard.
+</Accordion>
+
+<Accordion title="Clone failed outright">
+  A clone that fails entirely shows: "We could not process that reel. You were not charged the clone price. Try another link." No credits are deducted.
+</Accordion>
+
+<Accordion title="Avatar has no Reference Pack yet">
+  A Copy a Reel video draws each cast avatar from their Reference Pack. If a cast avatar doesn't have one yet, the copy generates it automatically before continuing — the video card reads "Preparing the Avatar's Reference Pack" while this runs. The pack costs the same credits as the one generated when an avatar is first saved, and you're only charged for it once.
+</Accordion>

@@ -1,0 +1,112 @@
+---
+title: "How Credits Work: Costs for Images, Voice, and Video"
+sidebarTitle: "Credits"
+description: "Credits are the single unit for every generation. Learn what each action costs, how your monthly pool refills, and how to read your credit history."
+---
+
+Credits are the one currency for everything you make in Avatar Factory — face images, scene images, voice candidates, and seconds of video all draw from the same monthly pool. Your plan determines how many credits you receive each month; the cost per action is identical on every plan. The **Plan & Usage** page always shows your current balance and the line-by-line history of every charge.
+
+## What each action costs
+
+| Action | Credits |
+|---|---|
+| One generated image (face, scene, or background) | 1 |
+| Refine or reroll one image | 1 |
+| Reference Pack saved at avatar creation | 6 (one-time) |
+| 3 voice preview candidates | 1 |
+| Regenerate a single voice preview | 0.33 |
+| Standard video — HeyGen Avatar IV | 1 per second |
+| Cinematic video — Kling v3 | 2 per second |
+| Full Clone of a reel (shot-by-shot analysis) | 10 |
+
+The voice track inside a video is included in the per-second rate. You are not charged separately for speech in a video.
+
+<Note>
+  Script writing with the AI co-writer is free and never spends credits. It has its own daily cap of 50 turns on a paid plan; the count resets each day.
+</Note>
+
+## Before the trial
+
+An account that has not started the trial can generate 2 images and write 5 scripts at no cost. Once those are used, the app shows **"You've used your free allowance. Start the $1 trial to keep creating."** The trial is $1 for three days and includes 15 credits.
+
+## Worked example
+
+Sarah is on Creator (790 credits/mo). In one session she:
+
+1. Generates 4 scene images — **4 credits**
+2. Refines one image twice — **2 credits**
+3. Renders a 40-second standard video — **40 credits**
+4. Renders a 20-second mixed video (5s cinematic hook + 15s standard body) — **10 + 15 = 25 credits**
+
+**Total: 71 credits used · 719 remaining**
+
+## Estimated monthly video output
+
+These estimates assume 45-second videos on the standard model. Shorter videos stretch your credits; cinematic shots (2 cr/sec) cost double.
+
+| Plan | Monthly credits | ~Videos/mo |
+|---|---|---|
+| Starter | 325 | ~7 |
+| Creator | 790 | ~17 |
+| Influencer (base) | 1,490 | ~33 |
+
+## How credits refill
+
+Credits refill at the start of each billing month. Unused credits do **not** roll over to the next month. On an annual plan you pay once a year, but credits still arrive month by month — your full yearly total is never deposited all at once.
+
+Open **Plan & Usage** to see **Monthly credits remaining** and the **Next refill** date.
+
+## Credit lifecycle
+
+When you start a generation, credits move through a defined sequence before any charge is final.
+
+<Steps>
+  <Step title="Reserved">
+    Credits are held the moment you click Generate or Render. The job has not completed yet and the hold is not a final charge.
+  </Step>
+  <Step title="Settled">
+    The final charge when the job completes. For video, the settled amount is reconciled to the real rendered length — it can be slightly lower or higher than the original estimate.
+  </Step>
+  <Step title="Released">
+    The hold returns to your balance in full if the job fails or is canceled. Released credits are immediately available.
+  </Step>
+  <Step title="Expired">
+    A stale hold from a job that never reported back is returned automatically. The check runs whenever your balance is read; holds older than two hours are treated as expired.
+  </Step>
+</Steps>
+
+## Checking your balance
+
+<Steps>
+  <Step title="Open Plan & Usage">
+    Click **Plan & Usage** in the sidebar.
+  </Step>
+  <Step title="Read the Credits card">
+    The **Credits** card shows **Monthly credits remaining** as a "remaining of included" figure, and the **Next refill** date below it.
+  </Step>
+  <Step title="Review Credit Usage">
+    Scroll to **Credit Usage** for a line-by-line history — newest first — showing each action, credit change, status (reserved / settled / released / expired), and the running balance after each entry.
+  </Step>
+</Steps>
+
+<Tip>
+  Before buying an upgrade to get more credits, check the Credit Usage list. Failed generations show as **released** and those credits are already back in your balance.
+</Tip>
+
+## Failed renders and credits
+
+A failed render is never charged. The credit hold is released automatically and shows as **released** in Credit Usage. You do not need to contact support for the release to happen. See [Credits and failed renders](/troubleshooting/render-failures) for more detail.
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I lose credits if a render fails?">
+    No. Credits are held when a job starts and only charged when it completes. If a render fails or is canceled, the hold is released back to your balance in full automatically. The Credit Usage list shows the line as **released**.
+  </Accordion>
+  <Accordion title="Why does my video charge differ from the estimate?">
+    Video credits are reconciled to the real rendered length. The app reserves an estimate when you click Render, then settles at the actual seconds produced — so the final charge can be slightly lower or higher. The Credit Usage list shows the settled amount.
+  </Accordion>
+  <Accordion title="Do unused credits roll over to next month?">
+    No. Each plan's monthly allocation resets at the start of the next billing month and unused credits do not carry forward. This applies to annual plans too: credits arrive month by month and reset on each monthly anniversary.
+  </Accordion>
+</AccordionGroup>

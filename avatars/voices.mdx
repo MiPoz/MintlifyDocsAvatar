@@ -1,0 +1,136 @@
+---
+title: "Voices: Design, Regenerate, or Use ElevenLabs"
+sidebarTitle: "Voices"
+description: "Give your avatar a voice by designing one from a text description, regenerating previews until it sounds right, or connecting your ElevenLabs account."
+---
+
+Every video your avatar appears in is spoken in its voice. You can set a voice during the avatar creation wizard, when importing a face, or any time afterward by opening the avatar page and clicking **Edit voice**. Avatar Factory generates AI voices from plain text descriptions — specify gender, origin, accent, pacing, pitch, and tone, and get three audible previews to choose from. If you already run a voice in ElevenLabs, you can connect that account and use any voice from your library instead.
+
+## Where to set or change a voice
+
+A voice can be set or changed in three places:
+
+- **The creation wizard** (scratch or template) — the Voice step at the end
+- **The import wizard** — the Voice step at the end
+- **The avatar page** — click **Edit voice** at any time after saving
+
+If you try to make a video with an avatar that has no voice, the app stops and asks you to add one. Click **Generate Voice** and you land directly on the Voice step — it takes about 30 seconds.
+
+## Design a voice from a description
+
+<Steps>
+  <Step title="Write a voice description">
+    The **Voice description** field drafts itself automatically from the avatar's face, story, and references. Edit it freely, click **Suggest with AI** if the field is empty, or click **Regenerate prompt** for another AI-written draft. The field requires at least 10 characters.
+
+    Make it specific. The most useful details are:
+    - **Gender** — male, female, non-binary
+    - **Origin** — *"Emirati from Dubai"* beats *"Middle Eastern"*; *"Nigerian raised in London"* beats *"British"*
+    - **Accent** — name it directly
+    - **Pacing** — fast and energetic, measured, slow and deliberate
+    - **Pitch** — deep baritone, mid-range, high and bright
+    - **Timbre** — pick two or three words: warm, gravelly, smooth, breathy, crisp, resonant
+    - **Emotion or persona** — authoritative, playful, conspiratorial, calm
+  </Step>
+
+  <Step title="Optional: open Advanced settings">
+    Click **Advanced · tuning & preview text** to access:
+    - **Loudness** — overall volume of the voice
+    - **Guidance** — how closely the model follows the description
+    - **Custom preview text** — a specific line (up to 200 characters) for the previews to speak, instead of the default
+  </Step>
+
+  <Step title="Generate 3 voice previews">
+    Click **Generate 3 voice previews**. This charges **1 credit** for the batch of three. The previews render in about 30 seconds.
+  </Step>
+
+  <Step title="Pick a voice">
+    Press play on **Voice 1**, **Voice 2**, and **Voice 3**. Click **Use this voice** on the one that sounds like a real person without trying. The button changes to **✓ Picked**.
+
+    <Tip>
+      If none of the three convince you, don't settle. Regenerate a fresh batch rather than picking the least-bad option. Voice carries a lot of the realism.
+    </Tip>
+  </Step>
+
+  <Step title="Save">
+    Click **Finish avatar →** (or **Save avatar →** in the import wizard) to save the voice with the avatar.
+  </Step>
+</Steps>
+
+## Regenerate a preview
+
+You don't have to commit to the first batch. Two regeneration options are available:
+
+- **Single tile.** Under any preview tile, type what should change — *"warmer, slower, less announcer"* — and click **Regenerate**. This costs **⅓ credit** and returns one updated preview.
+- **Fresh batch of 3.** Click **Generate 3 more** for an entirely new set of three previews. This costs **1 credit**. The new three replace the current grid, so pick a favorite from the current batch before you replace them if one was close.
+
+<Note>
+  If you see *"Pick one of the three voices first."*, play the previews, click **Use this voice** on one, then try the action again.
+</Note>
+
+## Change the voice after saving
+
+1. Open the avatar from **Avatars** and click **Edit voice**.
+2. The Voice step opens with your current voice sample shown at the top.
+3. Generate new previews and click **Use this voice**, or switch to your ElevenLabs voice list.
+4. Click **Finish avatar →** to save the change.
+
+Previously rendered videos keep the voice they were made with. Only new videos use the updated voice.
+
+## Connect your ElevenLabs account
+
+If you already have a voice in ElevenLabs — a cloned voice, a custom design, or a licensed voice — connect your account and use it in Avatar Factory. Speech for avatars using an ElevenLabs voice runs on your ElevenLabs credits.
+
+<Steps>
+  <Step title="Connect the account">
+    1. Open **Settings**, scroll to **Connected Accounts**, and click **Connect** next to **ElevenLabs**. (The import wizard's **Use my ElevenLabs voice** panel has the same form.)
+    2. In ElevenLabs, click **Create API Key** and give it a name.
+    3. Set these four permissions on the key:
+       - **Text to Speech** — enabled ✓
+       - **Speech to Speech** — enabled ✓
+       - **Voices** — Read
+       - **User** — Access
+    4. Copy the key (it starts with `sk_`) and paste it into the box in Avatar Factory. Press Enter or click the connect button.
+
+    <Note>
+      If you see *"That key didn't verify. Check it and try again."*, the key is either missing a permission or lost a character during the paste. Create a fresh key with all four permissions and paste it again.
+    </Note>
+  </Step>
+
+  <Step title="Pick the voice">
+    1. On the Voice step, choose **Use my ElevenLabs voice**.
+    2. Use **Search your voices** to find the one you want. Each row has a play button to preview it.
+    3. Click the row to select it, then save the avatar.
+  </Step>
+</Steps>
+
+### Reconnect or disconnect
+
+In **Settings**, the ElevenLabs row shows **Connected** or **Not connected**. If a stored key stops working, click **Reconnect** and paste a fresh key. Clicking **Disconnect** removes the key — the confirmation explains that avatars using those voices will need a reconnect before their next video.
+
+## Credit reference
+
+| Action | Credits |
+|---|---|
+| Generate 3 voice previews | 1 cr |
+| Regenerate a single preview with a note | ⅓ cr |
+| Generate a fresh batch of 3 | 1 cr |
+| Speech in videos | Included in per-second video rate |
+| ElevenLabs voice speech | Runs on your ElevenLabs credits |
+
+<Warning>
+  Canceling your Avatar Factory subscription releases the voices you designed in Avatar Factory, and they cannot be recovered. If you plan to return, **pause your subscription** instead of canceling. See the subscription management guide for instructions.
+</Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="How much does a voice cost in credits?">
+    One credit for a batch of three previews, and one-third of a credit to regenerate a single preview with a note. Saving the avatar with the chosen voice costs nothing extra. Speech in your videos is included in the per-second video rate, so you're not charged again for the voice when you render.
+  </Accordion>
+  <Accordion title="Can I change the voice after the avatar is saved?">
+    Yes. Open the avatar page and click **Edit voice**. It reopens the Voice step with your current voice shown, and you can generate new previews and pick one, or switch to a connected ElevenLabs voice. Videos you've already rendered keep the voice they were made with.
+  </Accordion>
+  <Accordion title="What if my ElevenLabs voice list is empty?">
+    If the list says *"No voices in this ElevenLabs account yet"*, the connected account has no voices. Create one at elevenlabs.io, or switch to **✦ Design a new voice** in Avatar Factory.
+  </Accordion>
+</AccordionGroup>

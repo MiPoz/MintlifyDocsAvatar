@@ -1,0 +1,124 @@
+---
+title: "Connect Avatar Factory to Claude Desktop or Web via MCP"
+sidebarTitle: "Claude MCP"
+description: "Add the Avatar Factory MCP connector to Claude to research trends, write reel scripts, and hand off to the app for rendering — no API key needed."
+---
+
+The Avatar Factory MCP connector plugs directly into Claude so you can research what's trending in your niche, shape an AI persona, write a full reel script in that persona's voice, and hand off to the Avatar Factory app with a single click to render the finished video. Everything through the script happens in the chat you already have open. Rendering, face generation, and voice synthesis happen in the app — the connector never produces images, video, or audio inside Claude itself.
+
+## Before You Connect
+
+- **Claude plan:** Custom connectors work on paid Claude plans — Pro, Max, Team, and Enterprise — on claude.ai, Claude Desktop, and Claude Code, wherever the Connectors section appears in Settings.
+- **Avatar Factory plan:** Using the connector requires an active Avatar Factory subscription. The $1 three-day trial counts, on any plan (Starter, Creator, or Influencer).
+- **Auth method:** OAuth 2.1 with PKCE (S256). No API key to generate, store, or rotate.
+
+**MCP URL:** `https://mcp.avatarfactory.io/mcp`
+
+## Setup
+
+<Tabs>
+  <Tab title="claude.ai / Claude Desktop">
+    <Steps>
+      <Step title="Open Settings → Connectors">
+        In Claude, open **Settings** and navigate to the **Connectors** section.
+      </Step>
+      <Step title="Add a custom connector">
+        Click **Add custom connector** and paste `https://mcp.avatarfactory.io/mcp`, then confirm.
+      </Step>
+      <Step title="Sign in to Avatar Factory">
+        A window titled **Connect AvatarFactory to Claude** opens. Enter your email and continue, or use Google or Meta. New to Avatar Factory? Create an account in-flow. Returning? Sign in with your password.
+      </Step>
+      <Step title="Start a subscription if prompted">
+        If your account has no active plan, the window asks you to start the $1 trial. Complete checkout, then click **I've completed payment, continue**.
+      </Step>
+      <Step title="Approve the consent screen">
+        On the **Allow Claude to use AvatarFactory?** screen, verify the signed-in email and click **Approve and connect**. Click **Deny** to stop.
+      </Step>
+    </Steps>
+
+    Start a new chat and ask Claude to pull trends for your niche. The Avatar Factory tools are listed once the connection is active.
+  </Tab>
+  <Tab title="Claude Code">
+    Run the following command in your terminal:
+
+    ```bash
+    claude mcp add --transport http avatarfactory https://mcp.avatarfactory.io
+    ```
+
+    Start Claude Code, then run `/mcp` in the chat to confirm Avatar Factory tools are live. The sign-in and approval steps above complete in your browser the first time you invoke a tool.
+  </Tab>
+</Tabs>
+
+## Available Tools
+
+Trend research and ideation are included with your plan. Writing a script consumes credits from your monthly allowance.
+
+| Tool | What It Does |
+|---|---|
+| `get_trending` | Trending formats and hooks in any niche, drawn from 500 million analyzed reels |
+| `ideate_influencer` | Persona concept: name options, backstory angles, and target audience |
+| `ideate_hooks` | Opening-line variations built on proven scroll-stopping hook patterns |
+| `get_video_ideas` | A queue of reel and story ideas already working in your niche |
+| `generate_reel_script` | Full reel script in your persona voice, hook to CTA (consumes plan credits) |
+| `list_avatars` | Your saved avatars, so Claude scripts for the right one |
+| `publish_video` | Publishes a rendered reel to Instagram or TikTok — only when you explicitly request it |
+
+## Workflow Example
+
+Here's the full flow from niche to rendered reel:
+
+<Steps>
+  <Step title="Tell Claude your niche">
+    Open a new chat and describe your content niche — for example, "personal finance for Gen Z."
+  </Step>
+  <Step title="Pull trending formats">
+    Claude calls `get_trending` and returns what's winning right now in that niche.
+  </Step>
+  <Step title="Generate hook variations">
+    Claude calls `ideate_hooks` and drafts opening lines structured on proven patterns.
+  </Step>
+  <Step title="Write the full script">
+    Claude calls `generate_reel_script` and writes the complete reel in your persona voice, hook through CTA. This step consumes credits.
+  </Step>
+  <Step title="Hand off to the app">
+    Tell Claude "go generate a video in AvatarFactory." It returns a one-click link with your avatar preselected. Click it to open the wizard in the app.
+  </Step>
+  <Step title="Render the reel">
+    The wizard runs with your script pre-loaded. Confirm and render — the finished captioned MP4 is ready in about three minutes.
+  </Step>
+</Steps>
+
+## Security Notes
+
+- **Scoped access** — Claude can research trends, ideate personas, write scripts, and read your avatar library. Nothing else.
+- **Credits on explicit request only** — `generate_reel_script` runs only when you ask for it in the chat.
+- **Publishing requires your confirmation** — `publish_video` never runs automatically.
+- **Revoke anytime** — disconnect Avatar Factory from Settings → Connectors in Claude.
+
+<Warning>
+  The connector never posts on its own. Publishing runs only when you explicitly ask for it in the conversation.
+</Warning>
+
+<Note>
+  Claude cannot render video inside the chat window. The connector writes the script and hands you a one-click link to render in the Avatar Factory app. The finished video appears in your app library, not in Claude.
+</Note>
+
+## Troubleshooting
+
+<Accordion title="Your session expired. Please start again.">
+  Close the connection window and add the connector again from Settings → Connectors. The OAuth session timed out before you completed the approval.
+</Accordion>
+
+<Accordion title="We couldn't find your subscription yet.">
+  The account you signed in with has no active Avatar Factory subscription. Complete the $1 trial checkout, then click **I've completed payment, continue**. If you paid on another device, refresh the connection page first.
+</Accordion>
+
+<Accordion title="Your payment is still processing.">
+  Payment can take up to a minute to confirm. Wait a moment and click **I've completed payment, continue** again.
+</Accordion>
+
+<Accordion title="The Avatar Factory tools don't show in my chat.">
+  In Claude (web or Desktop), start a **new chat** after approving the connector — tools only appear in chats opened after connection. In Claude Code, run `/mcp` to verify the server is listed and active.
+</Accordion>
+
+Still stuck? Email [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) with the email on your Avatar Factory account, the Claude surface you're using (web, Desktop, or Code), and a screenshot of where the connection stops.

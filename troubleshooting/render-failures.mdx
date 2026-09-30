@@ -1,0 +1,109 @@
+---
+title: "Fix Video Render Failures and Resume a Failed Render"
+sidebarTitle: "Render Failures"
+description: "Every render failure message Avatar Factory shows, what each one means, the specific fix for each, and how to resume a failed video without starting over."
+---
+
+When a render fails, Avatar Factory always tells you why in plain words — never as a raw error code. The failed video card keeps its draft intact so you can apply a fix and resume without rebuilding from scratch. Credits held for the failed render are returned to your balance automatically; you do not need to contact support for that to happen.
+
+## Where failure messages appear
+
+- **Videos page** — the card gets a **Failed** badge and the first sentence of the message appears in the card's meta line.
+- **In-app notifications panel** — the full message.
+- **Oven screen** — if you were still watching when the failure occurred, "Render failed." followed by the reason.
+
+Every failed video shows a **Resume & Re-render →** button on its video page. Apply the fix described below, then click that button to reopen the wizard with the same avatar, script, shots, scenes, and caption settings.
+
+## Failure messages and fixes
+
+<AccordionGroup>
+  <Accordion title="Rendering failed — try again, contact support if it persists">
+    **What it means:** A general error stopped the render. There is no specific cause you can act on.
+
+    **Fix:**
+    1. Open the video and click **Resume & Re-render →**.
+    2. On the Shots step, click **Generate · N cr** again.
+    3. If it fails a second time, email [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) with the video ID (the last segment of the URL after `/videos/`) and the time you started the render.
+  </Accordion>
+
+  <Accordion title="Rendering stopped: you ran out of credits">
+    **What it means:** The render needed more credits than your balance held.
+
+    **Fix:**
+    1. Open **Plan & Usage → Billing** and check your balance and renewal date.
+    2. To render now: upgrade to the next plan tier — credits are added immediately.
+    3. Optionally shorten the cut on the Shots step (cinematic shots cost 2 cr/sec, talking-head shots 1 cr/sec).
+    4. Click **Resume & Re-render →** and generate again.
+  </Accordion>
+
+  <Accordion title="Rendering failed: this avatar has no voice yet">
+    **What it means:** The avatar used in this video has no voice, so there is nothing to speak the script.
+
+    **Fix:**
+    1. Open **Avatars**, open the avatar, and add or design a voice.
+    2. Return to the video and click **Resume & Re-render →**.
+  </Accordion>
+
+  <Accordion title="Rendering failed: one of the images was rejected">
+    **What it means:** A scene image or reference image was refused by the video service.
+
+    **Fix:**
+    1. Click **Resume & Re-render →**.
+    2. On the Shots step, find the shot using the rejected image and swap it for a different saved scene or generate a new one from the scene drawer.
+    3. If you cannot identify which image failed, start with the first cinematic shot — those shots start from a scene image.
+    4. Generate again.
+  </Accordion>
+
+  <Accordion title="Rendering stopped: content filter triggered">
+    **What it means:** The script text or a shot's direction hit the content filter — typically violent, sexual, hateful, or real-person-likeness content.
+
+    **Fix:**
+    1. Click **Resume & Re-render →** and go back to the Script step.
+    2. Rewrite the flagged passage. Direction text on shot cards is also checked.
+    3. Return to Shots and generate again.
+
+    See [Content Rules, Likeness Rights, and Copyright](/policies/content-rules) for the full acceptable use rules.
+  </Accordion>
+
+  <Accordion title="Rendering failed: video service did not respond">
+    **What it means:** A temporary outage or timeout on the rendering side. Your draft is untouched.
+
+    **Fix:**
+    1. Wait a few minutes.
+    2. Click **Resume & Re-render →** and generate again.
+    3. If it fails three times in a row, email [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) with the video ID — the team monitors service problems and can tell you when they clear.
+  </Accordion>
+
+  <Accordion title="This take didn't render — credits were returned">
+    **What it means:** A single shot failed — the rest of the video is intact.
+
+    **Fix:**
+    1. On the video page, find the shot card with the warning.
+    2. Click **↻ Try Again** on that card, or **Fix This Shot** to change the transcript, direction, or scene first.
+    3. When the new take is ready, click **Review Takes**, keep the take you want, then click **Rebuild Final Video** in the bar at the bottom.
+  </Accordion>
+</AccordionGroup>
+
+## Resuming a failed video
+
+Click **Resume & Re-render →** on the failed video's page. The wizard reopens with the same avatar, script, shots, scene picks, and caption settings — landing directly on the last build step. Apply your fix and generate again. Nothing is rebuilt from scratch.
+
+<Note>
+  If the **Resume & Re-render →** button is missing, the video was created outside the wizard or its draft was deleted. Use **Generate Similar →** instead, which reconstructs the shot list from the video.
+</Note>
+
+## The "HeyGen only (fallback)" badge
+
+This badge is **not** a failure — the video is complete and downloadable. It means a cinematic shot did not return from its engine, so the talking-head engine rendered that part instead of failing the whole video. If the fallback take does not fit your script, click **Fix This Shot** on that shot card to regenerate it with Kling v3.
+
+## Credits on failure
+
+A render that fails returns its credits. A single-shot failure says "The credits were returned" on the shot card. The Credit Usage list in **Plan & Usage** shows the line as **released**. If your balance does not reflect the return within a few minutes, email support with the video ID.
+
+## When to contact support
+
+Email [Support@AvatarFactory.IO](mailto:Support@AvatarFactory.IO) with the video ID, the start time, and a screenshot if:
+
+- The same failure message comes back after one retry.
+- Credits did not return within a few minutes.
+- A render is stuck past 20 minutes with no progress.

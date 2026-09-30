@@ -1,72 +1,112 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
+  "name": "Avatar Factory",
+  "theme": "willow",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://media.brand.dev/03352555-66eb-4f09-8f97-e9254a7f8cbf.svg",
+    "dark": "https://media.brand.dev/03352555-66eb-4f09-8f97-e9254a7f8cbf.svg"
+  },
+  "favicon": "https://media.brand.dev/275d63f6-4b37-49da-9b8e-96b9f19db728.svg",
+  "colors": {
+    "primary": "#24c6fc",
+    "light": "#865ef5"
+  },
+  "font": {
+    "headings": {
+      "family": "Montserrat"
+    },
+    "body": {
+      "family": "Montserrat"
+    }
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Start for $1",
+      "href": "https://app.avatarfactory.io/register"
     }
   },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Avatars",
+            "pages": [
+              "avatars/overview",
+              "avatars/create-from-scratch",
+              "avatars/templates",
+              "avatars/import-your-face",
+              "avatars/voices",
+              "avatars/scenes-and-images"
+            ]
+          },
+          {
+            "group": "Videos",
+            "pages": [
+              "videos/overview",
+              "videos/video-wizard",
+              "videos/recreate-a-reel",
+              "videos/download-and-captions"
+            ]
+          },
+          {
+            "group": "Growth Tools",
+            "pages": [
+              "growth/viral-radar",
+              "growth/reel-analytics",
+              "growth/publishing"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/claude-mcp",
+              "integrations/chatgpt-mcp",
+              "integrations/trends-mcp",
+              "integrations/api-access"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "billing/plans",
+              "billing/credits",
+              "billing/manage-subscription"
+            ]
+          },
+          {
+            "group": "Policies",
+            "pages": [
+              "policies/content-rules",
+              "policies/refund-policy"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/render-failures",
+              "troubleshooting/generation-failures",
+              "troubleshooting/credits-and-limits",
+              "troubleshooting/contact-support"
+            ]
+          }
+        ]
+      }
     ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://avatarfactory.io"
     }
   }
 }
